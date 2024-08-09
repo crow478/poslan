@@ -11,6 +11,7 @@ header {
     padding: 15px;
     text-align: center;
     
+    
 }
 
 nav a {
@@ -114,4 +115,30 @@ form input {
     /* overflow-y: scroll; Para solo scroll vertical */
     /* overflow-x: scroll; Para solo scroll horizontal */
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.item {
+    flex: 1 1 300px; /* La caja se expandirá hasta 300px y luego se ajustará */
+    margin: 10px;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Para pantallas más pequeñas, los elementos se apilan verticalmente */
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        flex: 1 1 100%; /* En pantallas muy pequeñas, los elementos ocupan todo el ancho */
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.text {
+    font-size: 1.2em; /* La fuente se ajustará en función del tamaño del contenedor */
+}
