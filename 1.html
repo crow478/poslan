@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>POSLAN S.A.</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            width: 100%;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            position: relative;
+            padding: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .section h2 {
+            color: #4CAF50;
+            font-size: 1.5em;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        .section p {
+            color: #ffffff;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.6);
+            z-index: 1;
+        }
+        .section.quienes-somos::before {
+            background-image: url(imagenes/infusion-hierba-luisa.jpg);
+        }
+        .section.mision::before {
+            background-image: url(imagenes/infusion_hojas_estevia.jpg);
+        }
+        .section.vision::before {
+            background-image: url(imagenes/MRJCTVVY5REWRBCEWDZBJBQZ3Q.avif);
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .section h2 {
+                font-size: 1.2em;
+            }
+            .section p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>POSLAN S.A.</h1>
+        <div class="section quienes-somos">
+            <h2>¿Quiénes Somos?</h2>
+            <p>Somos una empresa que surge gracias a la aportación de conocimiento y aptitudes innovadoras de nuestros socios accionistas que creen firmemente en el potencial de nuestro producto chimalteco 100%.</p>
+        </div>
+        <div class="section mision">
+            <h2>Misión</h2>
+            <p>En POSLAN S.A. brindamos a nuestros clientes infusiones de té con excelentes estándares de calidad, elaborados con nuestra esencia de conocimientos ancestrales. Estamos comprometidos en el bienestar de los consumidores, ofreciendo una variedad de sabores naturales y saludables preparados con plantas medicinales nativas de Chimaltenango por nuestros expertos.</p>
+        </div>
+        <div class="section vision">
+            <h2>Visión</h2>
+            <p>Ser una empresa líder en la elaboración y comercialización de infusiones de té a nivel nacional, reconocidos por la calidad y excelencia de nuestros productos con un compromiso firme por el cuidado del medio ambiente y contribuir en el desarrollo de la economía local con un enfoque de sostenibilidad.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Té</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+   <div id="Cuerpo">
+    <header>
+        <h1>
+        <img src="imagenes/WhatsApp Image 2024-08-07 at 11.04.12 AM.jpeg"  height="50"width="50" aling="right"> <br>Tienda de Té Poslan  </h1>
+        <nav>
+            <a href="1.html">¿Quiénes somos?</a>
+          
+          
+
+        </nav>
+    </header>
+    <main>
+    
+        <section id="productos">
+            <h2>Productos</h2>
+            <div class="contenedor">
+               
+            </div>
+            
+            <table>
+                <Tr>
+                    <td>
+                        <div class="producto">
+                            <h3>Té de Stevia </h3>
+                             <img src="imagenes/infusion_hojas_estevia.jpg" height="150"width="150" aling="right">
+                            <p>Precio: Q10.00</p>
+                            <button onclick="agregarAlCarrito('Té Verde', 10.00)">Agregar al Carrito</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="producto">
+                            <h3>Té de Limon</h3>
+                            <img src="imagenes/MRJCTVVY5REWRBCEWDZBJBQZ3Q.avif" height="150"width="150" aling="right">
+                            <p>Precio: Q12.00</p>
+                            <button onclick="agregarAlCarrito('Té Negro', 12.00)">Agregar al Carrito</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="producto">
+                            <h3>Té de Maria Luisa</h3>
+                            <img src="imagenes/infusion-hierba-luisa.jpg" height="150"width="150" aling="right">
+                            <p>Precio: Q8.00</p>
+                            <button onclick="agregarAlCarrito('Té de Manzanilla', 8.00)">Agregar al Carrito</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="producto">
+                            <h3>Té de Menta</h3>
+                            <img src="imagenes/descarga.jpeg" height="150"width="150" aling="right">
+                            <p>Precio: Q8.00</p>
+                            <button onclick="agregarAlCarrito('Té de Manzanilla', 8.00)">Agregar al Carrito</button>
+                    </td>
+                    <td>
+                
+                </Tr>
+            </table>
+           
+          
+            </div>
+        </section>
+        <section id="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito"></ul>
+            <p>Total: Q<span id="total-carrito">0.00</span></p>
+            <button  id="pagar-btn">Pagar </button> 
+            
+        </section>
+    </main>
+    <footer>
+       
+            <p>&copy; Estamos ubicados en chimaltenango <br> Tel (36115611)</p>
+    </footer>
+ <div id="modal-pago" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Formulario de Pago</h2>
+                <form id="form-pago">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                    <label for="tarjeta">Número de Tarjeta:</label>
+                    <input type="text" id="tarjeta" name="tarjeta" required>
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                    <button type="submit">Enviar Pago</button>
+                </form>
+            </div>
+    
+    </div>
+</div>
+    <script>
+        let carrito = [];
+        let total = 0;
+
+        function agregarAlCarrito(producto, precio) {
+            carrito.push({ producto, precio });
+            total += precio;
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const listaCarrito = document.getElementById('lista-carrito');
+            listaCarrito.innerHTML = '';
+            carrito.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.producto} - $${item.precio.toFixed(2)}`;
+                listaCarrito.appendChild(li);
+            });
+            document.getElementById('total-carrito').textContent = total.toFixed(2);
+        }
+
+        document.getElementById('pagar-btn').onclick = function() {
+            document.getElementById('modal-pago').style.display = 'block';
+        };
+
+        document.querySelector('.close').onclick = function() {
+            document.getElementById('modal-pago').style.display = 'none';
+        };
+
+        document.getElementById('form-pago').onsubmit = function(event) {
+            event.preventDefault();
+            alert('Pago enviado con éxito!');
+            document.getElementById('modal-pago').style.display = 'none';
+        };
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('modal-pago')) {
+                document.getElementById('modal-pago').style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
