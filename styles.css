@@ -141,4 +141,12 @@ img {
 }
 .text {
     font-size: 1.2em; /* La fuente se ajustará en función del tamaño del contenedor */
+    
+}
+.scroll-container {
+    width: 300px;
+    height: 200px;
+    overflow-y: scroll; /* Agrega un scroll vertical */
+    overflow-x: hidden; /* Oculta el scroll horizontal si existe */
+    border: 1px solid #ccc;
 }

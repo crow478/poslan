@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Té</title>
@@ -9,6 +10,7 @@
 </head>
 
 <body>
+   
    <div id="Cuerpo">
     <header>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,6 +35,7 @@
             <table>
                 <Tr>
                     <td>
+                        
                         <div class="producto">
                             <h3>Té de Stevia </h3>
                              <img src="imagenes/infusion_hojas_estevia.jpg" height="150"width="150" aling="right">
@@ -48,14 +51,14 @@
                             <button onclick="agregarAlCarrito('Té Negro', 12.00)">Agregar al Carrito</button>
                         </div>
                     </td>
-                    <td>
+                    <Tr><Td>
                         <div class="producto">
                             <h3>Té de Maria Luisa</h3>
                             <img src="imagenes/infusion-hierba-luisa.jpg" height="150"width="150" aling="right">
                             <p>Precio: Q8.00</p>
                             <button onclick="agregarAlCarrito('Té de Manzanilla', 8.00)">Agregar al Carrito</button>
                         </div>
-                    </td>
+                    </Td>
                     <td>
                         <div class="producto">
                             <h3>Té de Menta</h3>
@@ -63,6 +66,8 @@
                             <p>Precio: Q8.00</p>
                             <button onclick="agregarAlCarrito('Té de Manzanilla', 8.00)">Agregar al Carrito</button>
                     </td>
+                </Tr>
+                    
                     <td>
                 
                 </Tr>
@@ -76,6 +81,7 @@
             <ul id="lista-carrito"></ul>
             <p>Total: Q<span id="total-carrito">0.00</span></p>
             <button  id="pagar-btn">Pagar </button> 
+            <div class="scroll-container"></div>
             
         </section>
     </main>

@@ -4,6 +4,7 @@
     <title>POSLAN S.A.</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
@@ -16,9 +17,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100vh; 
             color: #333;
         }
+        .scroll-container {
+    width: 300px;
+    height: 200px;
+    overflow-y: scroll; /* Agrega un scroll vertical */
+    overflow-x: hidden; /* Oculta el scroll horizontal si existe */
+    border: 1px solid #ccc;
+}
         .container {
             background-color: #ffffff;
             padding: 40px;
@@ -102,6 +110,7 @@
     
     <div class="container">
         <h1>POSLAN S.A.</h1>
+        <div class="scroll-container"></div>
         <div class="section quienes-somos">
             <h2>¿Quiénes Somos?</h2>
             <p>Somos una empresa que surge gracias a la aportación de conocimiento y aptitudes innovadoras de nuestros socios accionistas que creen firmemente en el potencial de nuestro producto chimalteco 100%.</p>
